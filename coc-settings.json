@@ -1,4 +1,5 @@
 {
+	"coc.preferences.diagnostic.enable": false,
 	"languageserver": {
 		"ccls": {
 			"command": "ccls",

@@ -3,6 +3,7 @@ Plug 'tomasr/molokai'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'w0rp/ale'
 call plug#end()
 
 " coc.nvim config
@@ -13,7 +14,7 @@ set hidden
 set cmdheight=2
 
 " Smaller updatetime for CursorHold & CursorHoldI
-set updatetime=300
+set updatetime=200
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
