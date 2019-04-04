@@ -2,9 +2,35 @@ call plug#begin('/opt/jcolledge/packages/nvim-plug')
 Plug 'tomasr/molokai'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug '/opt/jcolledge/packages/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'w0rp/ale'
+Plug 'liuchengxu/vista.vim'
 call plug#end()
+
+" my config
+set termguicolors
+colorscheme molokai
+
+set number relativenumber
+set title
+" set whichwrap=b,s,h,l
+set mouse=a
+set ignorecase
+set inccommand=split
+set scrolloff=5                " 5 lines before and after the current line when scrolling
+nnoremap <Esc><Esc> :nohlsearch<CR>
+nnoremap <M-Left> <C-w>h
+nnoremap <M-Down> <C-w>j
+nnoremap <M-Up> <C-w>k
+nnoremap <M-Right> <C-w>l
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+highlight CocHighlightText  guibg=#333333 ctermbg=223
+highlight MatchParen      guibg=#000000 guifg=#FD971F gui=bold
 
 " coc.nvim config
 " if hidden is not set, TextEdit might fail.
@@ -130,17 +156,22 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
-" my config
-colorscheme molokai
+" Vista config
+let g:vista_default_executive = 'coc'
+let g:vista_fzf_preview = ['right:50%']
 
-set number relativenumber
-set title
-" set whichwrap=b,s,h,l
-set mouse=a
-set ignorecase
-set inccommand=split
-set scrolloff=5                " 5 lines before and after the current line when scrolling
-nnoremap <Esc><Esc> :nohlsearch<CR>
 
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+" ALE config
+let g:ale_c_ccls_init_options = {
+      \ 'cache': {
+      \   'directory': '/tmp/ccls-ale',
+      \   'format': 'binary',
+      \   'hierarchicalPath': v:false,
+      \   'retainInMemory': 2,
+      \ },
+      \ 'diagnostics': {
+      \   'onChange': 1000,
+      \   'onOpen': 0,
+      \   'onSave': 0,
+      \ },
+      \ }
