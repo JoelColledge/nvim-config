@@ -1,6 +1,7 @@
 call plug#begin('/opt/jcolledge/packages/nvim-plug')
 Plug 'tomasr/molokai'
 Plug 'itchyny/lightline.vim'
+Plug 'majutsushi/tagbar' " for showing function name in status bar
 Plug 'airblade/vim-gitgutter'
 Plug '/opt/jcolledge/packages/fzf'
 Plug 'junegunn/fzf.vim'
@@ -128,7 +129,11 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ],
+      \             [ 'tagbar' ] ]
+      \ },
+      \ 'component': {
+      \   'tagbar': '%{tagbar#currenttag("%s", "", "f")}'
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status'
