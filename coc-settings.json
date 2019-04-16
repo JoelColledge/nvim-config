@@ -1,6 +1,5 @@
 {
 	"coc.preferences.diagnostic.enable": false,
-	"list.maxPreviewHeight": 32,
 	"languageserver": {
 		"ccls": {
 			"command": "ccls",

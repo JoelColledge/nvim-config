@@ -169,6 +169,9 @@ let g:ale_c_ccls_init_options = {
       \   'hierarchicalPath': v:false,
       \   'retainInMemory': 2,
       \ },
+      \ 'index': {
+      \   'onChange': v:true
+      \ },
       \ 'diagnostics': {
       \   'onChange': 1000,
       \   'onOpen': 0,
