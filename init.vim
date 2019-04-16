@@ -1,13 +1,12 @@
 call plug#begin('/opt/jcolledge/packages/nvim-plug')
-Plug 'tomasr/molokai'
-Plug 'itchyny/lightline.vim'
+Plug 'tomasr/molokai' " color scheme
+Plug 'itchyny/lightline.vim' " status bar
 Plug 'majutsushi/tagbar' " for showing function name in status bar
-Plug 'airblade/vim-gitgutter'
-Plug '/opt/jcolledge/packages/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'w0rp/ale'
-Plug 'liuchengxu/vista.vim'
+Plug 'airblade/vim-gitgutter' " git markings in the gutter
+Plug '/opt/jcolledge/packages/fzf' " fuzzy search
+Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " code completion, semantic search etc.
+Plug 'w0rp/ale' " linter
 call plug#end()
 
 " my config
@@ -92,6 +91,7 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHoldI * silent call CocActionAsync('showSignatureHelp')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -161,15 +161,10 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
-" Vista config
-let g:vista_default_executive = 'coc'
-let g:vista_fzf_preview = ['right:50%']
-
-
 " ALE config
 let g:ale_c_ccls_init_options = {
       \ 'cache': {
-      \   'directory': '/tmp/ccls-ale',
+      \   'directory': '/opt/jcolledge/cache/ccls-ale',
       \   'format': 'binary',
       \   'hierarchicalPath': v:false,
       \   'retainInMemory': 2,
