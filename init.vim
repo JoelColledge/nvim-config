@@ -1,5 +1,6 @@
 call plug#begin('/opt/jcolledge/packages/nvim-plug')
 Plug 'tomasr/molokai' " color scheme
+Plug 'bkad/CamelCaseMotion' " motion in camel and snake case words
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'majutsushi/tagbar' " for showing function name in status bar
 Plug 'airblade/vim-gitgutter' " git markings in the gutter
@@ -31,6 +32,9 @@ match ExtraWhitespace /\s\+$/
 
 highlight CocHighlightText  guibg=#333333 ctermbg=223
 highlight MatchParen      guibg=#000000 guifg=#FD971F gui=bold
+
+" CamelCaseMotion
+call camelcasemotion#CreateMotionMappings('<leader>')
 
 " coc.nvim config
 " if hidden is not set, TextEdit might fail.
