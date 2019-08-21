@@ -1,9 +1,13 @@
 call plug#begin('/opt/jcolledge/packages/nvim-plug')
 Plug 'tomasr/molokai' " color scheme
+Plug 'inkarkat/vim-ingo-library' " library for inkarkat's plugins
+Plug 'inkarkat/vim-mark' " multiple highlights
 Plug 'bkad/CamelCaseMotion' " motion in camel and snake case words
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'majutsushi/tagbar' " for showing function name in status bar
 Plug 'airblade/vim-gitgutter' " git markings in the gutter
+Plug 'vim-pandoc/vim-pandoc' " markdown etc support
+Plug 'vim-pandoc/vim-pandoc-syntax' " markdown etc syntax support
 Plug '/opt/jcolledge/packages/fzf' " fuzzy search
 Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " code completion, semantic search etc.
@@ -16,11 +20,12 @@ colorscheme molokai
 
 set number relativenumber
 set title
-" set whichwrap=b,s,h,l
+set whichwrap=b,s,h,l,<,>,[,]
 set mouse=a
 set ignorecase
 set inccommand=split
 set scrolloff=5                " 5 lines before and after the current line when scrolling
+set breakindent
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <M-Left> <C-w>h
 nnoremap <M-Down> <C-w>j
@@ -35,6 +40,12 @@ highlight MatchParen      guibg=#000000 guifg=#FD971F gui=bold
 
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings('<leader>')
+
+" Pandoc customization
+highlight! link Conceal Special
+
+" fzf customization
+nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 
 " coc.nvim config
 " if hidden is not set, TextEdit might fail.
