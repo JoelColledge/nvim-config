@@ -26,14 +26,19 @@ set ignorecase
 set inccommand=split
 set scrolloff=5                " 5 lines before and after the current line when scrolling
 set breakindent
+set nojoinspaces
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <M-Left> <C-w>h
 nnoremap <M-Down> <C-w>j
 nnoremap <M-Up> <C-w>k
 nnoremap <M-Right> <C-w>l
+nnoremap <space>w  :wa<cr>
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+highlight TabAlignment ctermbg=darkblue guibg=#11171b
+match TabAlignment /[^\t]\zs\t\+/
 
 highlight CocHighlightText  guibg=#333333 ctermbg=223
 highlight MatchParen      guibg=#000000 guifg=#FD971F gui=bold
