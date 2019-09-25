@@ -9,9 +9,6 @@
 			"initializationOptions": {
 				"cache": {
 					"directory": "/opt/jcolledge/cache/ccls"
-				},
-				"index": {
-					"onChange": true
 				}
 			}
 		}

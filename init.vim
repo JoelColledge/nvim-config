@@ -184,13 +184,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " ALE config
 let g:ale_c_ccls_init_options = {
       \ 'cache': {
-      \   'directory': '/opt/jcolledge/cache/ccls-ale',
-      \   'format': 'binary',
-      \   'hierarchicalPath': v:false,
-      \   'retainInMemory': 2,
-      \ },
-      \ 'index': {
-      \   'onChange': v:true
+      \   'directory': '/opt/jcolledge/cache/ccls',
       \ },
       \ 'diagnostics': {
       \   'onChange': 1000,
