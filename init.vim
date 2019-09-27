@@ -6,6 +6,7 @@ Plug 'bkad/CamelCaseMotion' " motion in camel and snake case words
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'majutsushi/tagbar' " for showing function name in status bar
 Plug 'airblade/vim-gitgutter' " git markings in the gutter
+Plug 'tpope/vim-fugitive' " git integration including blame
 Plug 'vim-pandoc/vim-pandoc' " markdown etc support
 Plug 'vim-pandoc/vim-pandoc-syntax' " markdown etc syntax support
 Plug 'ahf/cocci-syntax' " Coccinelle highlighting
