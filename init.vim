@@ -42,7 +42,7 @@ highlight TabAlignment ctermbg=darkblue guibg=#11171b
 match TabAlignment /[^\t]\zs\t\+/
 
 highlight CocHighlightText  guibg=#333333 ctermbg=223
-highlight MatchParen      guibg=#000000 guifg=#FD971F gui=bold
+highlight MatchParen      guibg=#000000 guifg=#FD971F ctermbg=black ctermfg=172 gui=bold
 
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings('<leader>')
