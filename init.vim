@@ -8,6 +8,7 @@ Plug 'majutsushi/tagbar' " for showing function name in status bar
 Plug 'airblade/vim-gitgutter' " git markings in the gutter
 Plug 'vim-pandoc/vim-pandoc' " markdown etc support
 Plug 'vim-pandoc/vim-pandoc-syntax' " markdown etc syntax support
+Plug 'ahf/cocci-syntax' " Coccinelle highlighting
 Plug '/opt/jcolledge/packages/fzf' " fuzzy search
 Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " code completion, semantic search etc.
