@@ -45,6 +45,12 @@ match TabAlignment /[^\t]\zs\t\+/
 highlight CocHighlightText  guibg=#333333 ctermbg=223
 highlight MatchParen      guibg=#000000 guifg=#FD971F ctermbg=black ctermfg=172 gui=bold
 
+" Identify .h files as 'c' rather than 'cpp' for ALE/ccls
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+augroup END
+
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings('<leader>')
 
