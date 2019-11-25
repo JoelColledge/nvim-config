@@ -51,6 +51,9 @@ augroup project
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 augroup END
 
+" vim-mark
+let g:mwDefaultHighlightingPalette = 'maximum'
+
 " CamelCaseMotion
 call camelcasemotion#CreateMotionMappings('<leader>')
 
