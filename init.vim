@@ -14,6 +14,7 @@ Plug '/opt/jcolledge/packages/fzf' " fuzzy search
 Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " code completion, semantic search etc.
 Plug 'w0rp/ale' " linter
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang linter
 call plug#end()
 
 " my config
@@ -202,4 +203,11 @@ let g:ale_c_ccls_init_options = {
       \   'onOpen': 0,
       \   'onSave': 0,
       \ },
+      \ }
+
+
+" vim-go config
+let g:go_fmt_command = "goimports"
+let g:go_fmt_options = {
+      \ 'goimports': '-local github.com/LINBIT',
       \ }
