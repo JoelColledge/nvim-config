@@ -210,5 +210,5 @@ let g:ale_c_ccls_init_options = {
 " vim-go config
 let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {
-      \ 'goimports': '-local github.com/LINBIT',
+      \ 'goimports': '-local github.com/LINBIT,github.com/piraeusdatastore',
       \ }
