@@ -93,3 +93,5 @@ RDMA
 CLI
 Pina
 Colada
+hostnames
+localhost
