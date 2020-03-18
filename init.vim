@@ -2,6 +2,7 @@ call plug#begin('/opt/jcolledge/packages/nvim-plug')
 Plug 'tomasr/molokai' " color scheme
 Plug 'inkarkat/vim-ingo-library' " library for inkarkat's plugins
 Plug 'inkarkat/vim-mark' " multiple highlights
+Plug 'tpope/vim-abolish' " replace preserving case
 Plug 'bkad/CamelCaseMotion' " motion in camel and snake case words
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'majutsushi/tagbar' " for showing function name in status bar
