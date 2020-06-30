@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter' " git markings in the gutter
 Plug 'tpope/vim-fugitive' " git integration including blame
 Plug 'vim-pandoc/vim-pandoc' " markdown etc support
 Plug 'vim-pandoc/vim-pandoc-syntax' " markdown etc syntax support
+Plug 'cespare/vim-toml' " toml highlighting
 Plug 'ahf/cocci-syntax' " Coccinelle highlighting
 Plug '/opt/jcolledge/packages/fzf' " fuzzy search
 Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
