@@ -45,6 +45,9 @@ match ExtraWhitespace /\s\+$/
 highlight TabAlignment ctermbg=darkblue guibg=#11171b
 match TabAlignment /[^\t]\zs\t\+/
 
+set list
+set listchars=tab:>-
+
 highlight CocHighlightText  guibg=#333333 ctermbg=223
 highlight MatchParen      guibg=#000000 guifg=#FD971F ctermbg=black ctermfg=172 gui=bold
 
