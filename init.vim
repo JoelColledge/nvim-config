@@ -65,6 +65,8 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 
 " Pandoc customization
 highlight! link Conceal Special
+let g:pandoc#compiler#arguments = "-f markdown-tex_math_dollars"
+let g:pandoc#formatting#extra_equalprg = "-f markdown-tex_math_dollars"
 
 " fzf customization
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
