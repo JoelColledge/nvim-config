@@ -95,3 +95,7 @@ Pina
 Colada
 hostnames
 localhost
+DRBD
+config
+KiB
+wildcard
