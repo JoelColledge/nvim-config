@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter' " git markings in the gutter
 Plug 'tpope/vim-fugitive' " git integration including blame
 Plug 'vim-pandoc/vim-pandoc' " markdown etc support
 Plug 'vim-pandoc/vim-pandoc-syntax' " markdown etc syntax support
+Plug 'vim-python/python-syntax' " Python highlighting
 Plug 'cespare/vim-toml' " toml highlighting
 Plug 'ahf/cocci-syntax' " Coccinelle highlighting
 Plug '/opt/jcolledge/packages/fzf' " fuzzy search
@@ -72,6 +73,9 @@ nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 
 " Better display for messages
 set cmdheight=2
+
+" Better Python highlighting
+let g:python_highlight_all = 1
 
 " coc.nvim config ====================================================
 
