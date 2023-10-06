@@ -71,6 +71,7 @@ let g:pandoc#formatting#extra_equalprg = "-f markdown-tex_math_dollars"
 
 " fzf customization
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 
 " Better display for messages
 set cmdheight=2
