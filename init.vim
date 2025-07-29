@@ -14,10 +14,7 @@ Plug 'cespare/vim-toml' " toml highlighting
 Plug 'ahf/cocci-syntax' " Coccinelle highlighting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy search
 Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " code completion, semantic search etc.
-Plug 'w0rp/ale' " linter
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang linter
-Plug 'luizribeiro/vim-cooklang', { 'branch': 'main', 'for': 'cook' } " cooklang highlighting
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " my config
