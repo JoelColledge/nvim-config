@@ -5,8 +5,8 @@
 		"ccls": {
 			"command": "ccls",
 			// "args": ["-log-file=/tmp/ccls.log", "-v=1"],
-			"filetypes": ["c", "cpp", "objc", "objcpp"],
-			"rootPatterns": [".ccls", ".vim/", "compile_commands.json", ".hg/"],
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
 			"initializationOptions": {
 				"cache": {
 					"directory": "/home/jrc/work/cache/ccls"
