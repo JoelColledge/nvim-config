@@ -5,7 +5,6 @@ Plug 'inkarkat/vim-mark' " multiple highlights
 Plug 'tpope/vim-abolish' " replace preserving case
 Plug 'bkad/CamelCaseMotion' " motion in camel and snake case words
 Plug 'itchyny/lightline.vim' " status bar
-Plug 'majutsushi/tagbar' " for showing function name in status bar
 Plug 'airblade/vim-gitgutter' " git markings in the gutter
 Plug 'tpope/vim-fugitive' " git integration including blame
 Plug 'vim-pandoc/vim-pandoc' " markdown etc support
@@ -240,17 +239,19 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ],
-      \             [ 'tagbar' ] ]
-      \ },
-      \ 'component': {
-      \   'tagbar': '%{tagbar#currenttag("%s", "", "f")}'
+      \             [ 'readonly', 'filename', 'modified' ],
+      \             [ 'currentfunction' ] ]
       \ },
       \ 'component_function': {
-      \   'cocstatus': 'coc#status'
+      \   'currentfunction': 'CocCurrentFunction',
       \ },
       \ }
 
+function! CocCurrentFunction()
+  return get(b:, 'coc_current_function', '')
+endfunction
+
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 
 " Using CocList

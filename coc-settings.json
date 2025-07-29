@@ -1,5 +1,6 @@
 {
 	"coc.preferences.diagnostic.enable": false,
+	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"languageserver": {
 		"ccls": {
 			"command": "ccls",
