@@ -1,4 +1,4 @@
-call plug#begin('/opt/jcolledge/packages/nvim-plug')
+call plug#begin()
 Plug 'tomasr/molokai' " color scheme
 Plug 'inkarkat/vim-ingo-library' " library for inkarkat's plugins
 Plug 'inkarkat/vim-mark' " multiple highlights
@@ -12,7 +12,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax' " markdown etc syntax support
 Plug 'vim-python/python-syntax' " Python highlighting
 Plug 'cespare/vim-toml' " toml highlighting
 Plug 'ahf/cocci-syntax' " Coccinelle highlighting
-Plug '/opt/jcolledge/packages/fzf' " fuzzy search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy search
 Plug 'junegunn/fzf.vim' " vim integration for fuzzy search
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " code completion, semantic search etc.
 Plug 'w0rp/ale' " linter

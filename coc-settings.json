@@ -9,7 +9,7 @@
 			"rootPatterns": [".ccls", ".vim/", "compile_commands.json", ".hg/"],
 			"initializationOptions": {
 				"cache": {
-					"directory": "/opt/jcolledge/cache/ccls"
+					"directory": "/home/jrc/work/cache/ccls"
 				}
 			}
 		}
